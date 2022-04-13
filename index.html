@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Formulário</title>
+    <meta name="author" content="Arthur Dias" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!--<link rel="stylesheet" href="style.css" type="text/css" />-->
+  </head>
+
+  <body>
+    <div class="d-flex justify-content-center">
+      <div class="card">
+        <h1 class="text-center">FORMULARIO DE INCLUSÃO DE DADOS</h1>
+        <form id="form" method="POST" action="insere.php" name="form">
+          <div class="row align-items-end">
+            <div class="mb-3">
+              <label for="nome" class="form-label"
+                >NOME DO SOLICITANTE DA CREDENCIAL:</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="nome"
+                name="nome"
+                placeholder="Nome completo"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="cpf" class="form-label">CPF:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="cpf"
+                name="cpf"
+                placeholder="No formato 111.222.333-44"
+                maxlength="14"
+                pattern="[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}"
+                required
+              />
+              <script type="text/javascript">
+                $("#cpf").mask("000.000.000-00");
+              </script>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">EMAIL:</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                placeholder="No formato email@example.com"
+              />
+            </div>
+
+            <div class="mb-3 col-12 col-md-4">
+              <label for="datePickerId" class="form-label"
+                >DATA DE NASCIMENTO:</label
+              >
+              <input
+                type="date"
+                id="datePickerId"
+                name="nascimento"
+                class="form-control"
+                required
+              />
+            </div>
+            <div class="mb-3 col-12 col-md-4">
+              <label for="localNasc" class="form-label"
+                >LOCAL DE NASCIMENTO:</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="localNasc"
+                name="localNasc"
+              />
+            </div>
+            <div class="mb-3 col-12 col-md-4">
+              <label for="profissao" class="form-label">PROFISSÃO:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="profissao"
+                name="profissao"
+              />
+            </div>
+            <div class="mb-3 col-12 col-md-3">
+              <label for="rg" class="form-label">RG:</label>
+              <input
+                type="password"
+                class="form-control"
+                id="rg"
+                name="rg"
+                placeholder="Completo incluindo marcadores"
+                required
+              />
+            </div>
+            <div class="mb-3 col-12 col-md-3">
+              <label for="cargo" class="form-label">CARGO:</label>
+              <input type="text" class="form-control" id="cargo" name="cargo" />
+            </div>
+            <div class="mb-3 col-12 col-md-3">
+              <label for="registro" class="form-label"
+                >REGISTRO PROFISSIONAL:</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="registro"
+                name="registro"
+              />
+            </div>
+            <div class="mb-3 col-12 col-md-3">
+              <label for="formacao" class="form-label"
+                >FORMAÇÃO ACADÊMICA:</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="formacao"
+                name="formação acadêmica"
+              />
+            </div>
+            <div class="mb-3 col-12 col-md-2">
+              <label for="cep" class="form-label">CEP:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="cep"
+                name="cep"
+                pattern="[0-9]{5}-[0-9]{3}"
+                maxlength="9"
+                placeholder="9 digitos"
+              />
+              <script type="text/javascript">
+                $("#cep").mask("00000-000");
+              </script>
+            </div>
+            <div class="mb-3 col-12 col-md-8">
+              <label for="endereco" class="form-label">ENDEREÇO:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="endereco"
+                name="endereco"
+                placeholder="Apenas rua/aveninda/travessa"
+              />
+            </div>
+            <div class="mb-3 col-12 col-md-2">
+              <label for="numero" class="form-label">NÚMERO:</label>
+              <input
+                type="number"
+                class="form-control"
+                id="numero"
+                name="numero"
+                placeholder="Apenas números"
+              />
+            </div>
+            <div class="mb-3 col-12 col-md-4">
+              <label for="bairro" class="form-label">BAIRRO:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="bairro"
+                name="bairro"
+              />
+            </div>
+            <div class="mb-3 col-12 col-md-4">
+              <label for="cidade" class="form-label">CIDADE:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="cidade"
+                name="cidade"
+              />
+            </div>
+            <div class="mb-3 col-12 col-md-4">
+              <label for="uf" class="form-label">ESTADO:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="uf"
+                name="uf"
+                maxlength="2"
+                placeholder="Apenas a sigla"
+              />
+            </div>
+            <div class="mb-3 col-12 col-md-3">
+              <label for="telefone" class="form-label">TELEFONE:</label>
+              <input
+                type="tel"
+                name="telefone"
+                id="telefone"
+                class="form-control"
+                pattern="\([0-9]{2}\)[\s][0-9]{4}-[0-9]{4,5}"
+                placeholder="Exemplo (11) 1234-5678"
+              />
+              <script type="text/javascript">
+                $("#telefone").mask("(00) 0000-00009");
+              </script>
+            </div>
+            <div class="mb-3 col-12 col-md-3">
+              <label for="celular" class="form-label">CELULAR:</label>
+              <input
+                type="tel"
+                name="celular"
+                id="celular"
+                class="form-control"
+                pattern="\([0-9]{2}\)[\s][0-9]{4}-[0-9]{4,5}"
+                placeholder="Exemplo (11) 1234-5678"
+              />
+              <script type="text/javascript">
+                $("#celular").mask("(00) 0000-00009");
+              </script>
+            </div>
+            <div class="mb-3 col-12 col-md-3">
+              <label for="funcao" class="form-label">FUNÇÃO</label>
+              <input
+                type="text"
+                name="funcao"
+                id="funcao"
+                class="form-control"
+              />
+            </div>
+            <div class="mb-3 col-12 col-md-3">
+              <label for="website" class="form-label">WEBSITE</label>
+              <input
+                type="url"
+                name="website"
+                id="website"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group mt-3 mx-auto ml-5">
+              <button
+                type="submit"
+                id="enviar"
+                class="btn btn-primary"
+                name="submit"
+              >
+                Enviar
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <script src="js/jquery-3.6.0.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/script.js"></script>
+      <script
+        type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.0/jquery.mask.js"
+      ></script>
+    </div>
+  </body>
+</html>
